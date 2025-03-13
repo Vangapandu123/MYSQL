@@ -1,0 +1,6 @@
+SELECT S.SNUM, S.SNAME, S.CITY, 
+       CASE 
+           WHEN EXISTS (SELECT 1 FROM CUST C WHERE C.CITY = S.CITY) THEN 'Has Customers in City'
+           ELSE 'No Customers in City'
+       END AS Status
+FROM SALESPEOPLE S;

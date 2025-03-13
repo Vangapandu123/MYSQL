@@ -1,0 +1,2 @@
+SELECT * FROM SALESPEOPLE
+WHERE CITY IN ('Barcelona', 'London');

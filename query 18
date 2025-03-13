@@ -1,0 +1,3 @@
+SELECT salesperson_id, order_date, MAX(amt) AS largest_order
+FROM orders
+GROUP BY salesperson_id, order_date;

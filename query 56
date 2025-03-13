@@ -1,0 +1,7 @@
+SELECT O.ONUM, O.SNUM AS Order_Salesperson, C.SNUM AS Customer_Salesperson, 
+       CASE 
+           WHEN O.SNUM = C.SNUM THEN 'Correct'
+           ELSE 'Incorrect'
+       END AS Verification 
+FROM ORDERS O 
+JOIN CUST C ON O.CNUM = C.CNUM;

@@ -1,0 +1,2 @@
+SELECT * FROM CUST
+WHERE serviced_by IN ('Peel', 'Motika');

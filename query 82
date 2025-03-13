@@ -1,0 +1,7 @@
+SELECT S.SNUM, S.SNAME, S.CITY, 
+       CASE 
+           WHEN EXISTS (SELECT 1 FROM CUST C WHERE C.CITY = S.CITY) 
+           THEN CONCAT(S.SNAME, ' - Has Customers in ', S.CITY)
+           ELSE CONCAT(S.SNAME, ' - No Customers in ', S.CITY)
+       END AS Matched_Status
+FROM SALESPEOPLE S;
